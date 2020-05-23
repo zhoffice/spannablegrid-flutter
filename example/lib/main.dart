@@ -27,7 +27,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +42,12 @@ class _MyHomePageState extends State<MyHomePage> {
               rows: 4,
               cells: _getCells(),
               spacing: 2.0,
-              onCellChanged: (cell) { print('Cell ${cell.id} changed'); },
+              onCellTap: (cell) {
+                print('Cell ${cell.id} taped');
+              },
+              onCellChanged: (cell) {
+                print('Cell ${cell.id} changed');
+              },
 //              editingOnLongPress: false,
             ),
           ],
@@ -63,7 +67,8 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Container(
         color: Colors.lime,
         child: Center(
-          child: Text("Tile 2x2",
+          child: Text(
+            "Tile 2x2",
             style: Theme.of(context).textTheme.title,
           ),
         ),
@@ -78,7 +83,8 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Container(
         color: Colors.lime,
         child: Center(
-          child: Text("Tile 1x1",
+          child: Text(
+            "Tile 1x1",
             style: Theme.of(context).textTheme.title,
           ),
         ),
@@ -93,7 +99,8 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Container(
         color: Colors.lightBlueAccent,
         child: Center(
-          child: Text("Tile 3x1",
+          child: Text(
+            "Tile 3x1",
             style: Theme.of(context).textTheme.title,
           ),
         ),
@@ -108,7 +115,8 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Container(
         color: Colors.lightBlueAccent,
         child: Center(
-          child: Text("Tile 1x2",
+          child: Text(
+            "Tile 1x2",
             style: Theme.of(context).textTheme.title,
           ),
         ),
