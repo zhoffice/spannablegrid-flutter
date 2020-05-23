@@ -51,7 +51,8 @@ class SpannableGridCellData {
       @required this.column,
       @required this.row,
       this.columnSpan = 1,
-      this.rowSpan = 1});
+      this.rowSpan = 1,
+      this.extData});
 
   Object id;
   Widget child;
@@ -59,6 +60,7 @@ class SpannableGridCellData {
   int row;
   int columnSpan;
   int rowSpan;
+  dynamic extData;
 }
 
 /// A grid widget that allows its items to span columns and rows and supports
